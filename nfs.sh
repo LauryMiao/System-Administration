@@ -35,7 +35,7 @@ while read line; do
 
 
 done < $FILE
-
+rm -rf ~/nfs.txt
 
 if [ ! -f "/usr/bin/nfsmount.sh" ];then
 	mt_nfs='No nfsmount.sh'
