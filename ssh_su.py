@@ -1,5 +1,21 @@
 #! /usr/bin/env python
 # coding:utf-8
+#********************************************************************
+#
+# version: 1.0
+#
+# Description: execute shell cmd in remote linux servers in multi-process
+#				
+# Input File: ip.txt in the current directory
+#             ip1,user,pwd_for_user,pwd_for_root,shell_cmd    
+#              seperated by comma
+#
+# Author: Laury Miao   miupeng@cpic.com.cn
+#
+# Date: 1 Jul 2016
+# 
+#********************************************************************
+
 import paramiko
 import os
 import re
