@@ -12,6 +12,7 @@ Formate:
 ip.txt:
 
 ip1,normal_user,pwd_for_normal_user,pwd_for_root,shell_cmd
+
 ip2,normal_user,pwd_for_normal_user,pwd_for_root,shell_cmd
 
 usage:
