@@ -62,13 +62,14 @@ def ssh_su(ip, user, password, su_passwd, cmd):
         buff1 += resp
         # print resp
 
-        if buff1.endswith(('#', '# ')) or resp == '':
+        if buff1.endswith('# *$') or resp == '':
             print "su: RIGHT!"
             break
         ### some bugs here (won't ending )with wrong su_passwd 
-        else:
+        elif buff1.endswith(('passord *$', 'failure *$')):
             print 'su: WRONG'
-            break
+            break  # or return 1 , cos not necessary for executing the rest of this function
+                   # but yet CANNOT ending with wrong password for root 
 
     ssh.send(cmd + '\n')
     buff = ""
